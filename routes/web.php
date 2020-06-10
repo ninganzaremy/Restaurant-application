@@ -23,6 +23,9 @@ Route::get('/menu', function () {
 Route::get('/pages', function () {
     return view('pages/about');
 });
+Route::get('/about', function () {
+    return view('pages/about');
+});
 Route::get('/Waitlist', function () {
     return view('pages/waitlist');
 });

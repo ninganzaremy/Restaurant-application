@@ -21,5 +21,8 @@
     "terminal.integrated.fontWeightBold": "normal",
     "editor.tabCompletion": "on",
     "emmet.showSuggestionsAsSnippets": true,
-    "emmet.excludeLanguages": ["markdown"]
+    "emmet.excludeLanguages": [
+        "markdown"
+    ],
+    "editor.tabSize": 1
 }
