@@ -26,7 +26,7 @@ Route::get('/pages', function () {
 Route::get('/about', function () {
     return view('pages/about');
 });
-Route::get('/Waitlist', function () {
+Route::get('/waitlist', function () {
     return view('pages/waitlist');
 });
 Route::get('/contact', function () {
@@ -35,6 +35,6 @@ Route::get('/contact', function () {
 Route::get('/giftcards', function () {
     return view('pages/giftcards');
 });
-Route::get('/Offers', function () {
+Route::get('/offers', function () {
     return view('pages/offers');
 });

@@ -20,7 +20,7 @@
   <section id="app-layout">
       @include('includes.side-menu')
       <div class="welcome-jumbo">
-        <div class="status">old</div>
+        <div class="status">NEW</div>
         <h1>Billy Burger</h1>
         <img src="/img//hamburger-and-fries-png-4.png" class="burger-fries">
       </div>

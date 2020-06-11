@@ -11,10 +11,13 @@
             <a href="/menu">Food</a>
           </li>
           <li>
-            <a href="/Waitlist">Waitlist</a>
+            <a href="/about">About</a>
           </li>
           <li>
-            <a href="/Offers">Offers</a>
+            <a href="/waitlist">Waitlist</a>
+          </li>
+          <li>
+            <a href="/offers">Offers</a>
           </li>
           <li>
             <a href="/giftcards">Giftcards</a>
