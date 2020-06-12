@@ -29,7 +29,14 @@ Route::get('/admin', 'admin\AdminController@dashboard');
 //Admin FoodCategories
 Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
 Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
-Route::get('/admin/food-categories/edit', 'admin\FoodCategoriesController@edit');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
+
+
+//Admin Fooditems
+Route::get('/admin/food-items', 'admin\FoodItemsController@index');
+Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
+Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+
 
 
 //Admin Autentication
