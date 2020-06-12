@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-
+ @section('content')
 
  <div class="dashboard-ecommerce">
 
@@ -525,4 +525,4 @@
                     </div>
                 </div>
             </div>
- @section('content')
+ @endsection
