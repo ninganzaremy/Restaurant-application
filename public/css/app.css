@@ -9275,7 +9275,7 @@ table {
   background: black;
 }
 
-#menu-page #food-preview .food-slider .slide:hover .background {
+#menu-page #food-preview .slide:hover .background {
   background: black;
   transform: translate3d(0, -200px, 0);
 }
@@ -9667,7 +9667,7 @@ body {
 #food-preview .food-slider .slide {
   width: 20%;
   position: relative;
-  height: 500px;
+  height: 550px;
   cursor: pointer;
   display: inline-block;
   white-space: normal;
