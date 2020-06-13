@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
+@section('title')
+Reservations - {{$settings["general"]->site_title}} 
+@endsection
 
 @section('content')
- <div id="waitlist-page">
-    <div class="content-box">
-    <div class="row">
-       <div class="col-md-6">
-        <h1>Get on the List</h1>
-        <form method="POST" action="/reservations">
+    <div id="waitlist-page">
+      
+      <div class="content-box">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Get On The List</h1>
+            <form method="POST" action="/reservations">
               @csrf
               <div class="form-group">
                 <label for="inputfname">First Name</label>
@@ -83,18 +87,11 @@
                 <button type="submit" class="btn btn-primary mb-2">Confirm</button>
               </div>
             </form>
-       
+          </div>
+          <div class="col-md-6">
+            <p>Please Note: This is not a reservation. You will be added to the current wait list. You may have a short wait once you arrive while we prepare your table.</p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <p>
-          Please Note: This not a reservation, you will be added to our current  wait list. You may  have a short  wait once you arrive while we prepare your table.
-        </p>
-      </div>
-      
     </div>
-
-     </div>
-  </div>
-
 @endsection
-

@@ -1,26 +1,29 @@
 @extends('layouts.app')
 
-
-@section('content')
-  <div id="about-page">
-    <div class="content-box">
-    <div class="row">
-     <div class="col-md-6">
-        <h1>About Page</h1>
-        <p>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-         <p>
-        What is Lorem Ipsum?
-       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-      </div>
-      <div class="col-md-6">
-          <img src="/img/about-page-img.jpeg" class="img-fluid">
-      </div>
-    </div>
-     </div>
-  </div>
+@section('title')
+About - {{$settings["general"]->site_title}} 
 @endsection
 
+
+
+@section('content')
+    <div id="about-page">
+      
+      <div class="content-box">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>About Page</h1>
+            <p>
+              Lorem ipsum dolor amet tote bag occupy taxidermy banh mi ramps snackwave single-origin coffee microdosing. Snackwave selvage palo santo small batch stumptown hoodie single-origin coffee man braid cloud bread vegan semiotics knausgaard lo-fi. Paleo etsy subway tile, fam umami chartreuse tumeric iPhone. Mustache freegan shaman, photo booth bicycle rights cronut occupy hexagon chillwave taxidermy you probably haven't heard of them swag irony messenger bag schlitz. Hammock farm-to-table ennui asymmetrical blog master cleanse, church-key chillwave. Messenger bag everyday carry swag, mumblecore normcore activated charcoal lomo organic shaman chillwave synth.
+            </p>
+            <p>
+              Lorem ipsum dolor amet tote bag occupy taxidermy banh mi ramps snackwave single-origin coffee microdosing. Snackwave selvage palo santo small batch stumptown hoodie single-origin coffee man braid cloud bread vegan semiotics knausgaard lo-fi. Paleo etsy subway tile, fam umami chartreuse tumeric iPhone. Mustache freegan shaman, photo booth bicycle rights cronut occupy hexagon chillwave taxidermy you probably haven't heard of them swag irony messenger bag schlitz. Hammock farm-to-table ennui asymmetrical blog master cleanse, church-key chillwave. Messenger bag everyday carry swag, mumblecore normcore activated charcoal lomo organic shaman chillwave synth.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img src="/img/about-page-img.jpeg" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+@endsection

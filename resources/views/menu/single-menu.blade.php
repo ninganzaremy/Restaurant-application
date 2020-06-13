@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-
+@section('title')
+{{$foodItem}} - {{$settings["general"]->site_title}} 
+@endsection
 
 @section('content')
     <div id="single-menu-page">
@@ -11,47 +13,23 @@
           <div class="content-box">
             <div class="row">
               <div class="col-md-12">
-                <h1>Burgers</h1>
+                <h1>{{$foodItem}}</h1>
               </div>
-              
+              @foreach ($foodItems as $item)
                 <div class="col-md-6">
                   <div class="item">
                     <div class="title">
-                      <h4>Texas Burgers</h4>
-                      <span class="price">$9</span>
+                      <h4>{{$item->title}}</h4>
+                      <span class="price">${{$item->price}}</span>
                     </div>
                     <div class="description">
-                      <p>bread, meat, tomatoes</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="title">
-                      <h4>Texas Burgers</h4>
-                      <span class="price">$9</span>
-                    </div>
-                    <div class="description">
-                      <p>bread, meat, tomatoes</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="title">
-                      <h4>Texas Burgers</h4>
-                      <span class="price">$9</span>
-                    </div>
-                    <div class="description">
-                      <p>bread, meat, tomatoes</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="title">
-                      <h4>Texas Burgers</h4>
-                      <span class="price">$9</span>
-                    </div>
-                    <div class="description">
-                      <p>bread, meat, tomatoes</p>
+                      <p>{{$item->description}}</p>
                     </div>
                   </div>
                 </div>
+              @endforeach
+              
+              
             </div>
           </div>
         </div>

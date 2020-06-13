@@ -8,13 +8,13 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Food Categories</h2>
+                            <h2 class="pageheader-title">All Offers Members</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Food Categories</li>
+                                        <li class="breadcrumb-item active" aria-current="page">All Offers Members</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -31,34 +31,35 @@
                         <!-- ============================================================== -->
                         <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                             <div class="card">
-                                <h5 class="card-header">All Food Categories</h5>
+                                <h5 class="card-header">All Members</h5>
                                 <div class="card-body">
                                     <table class="table">
                                         <thead>
                                             <tr>
                                                 <th scope="col">id</th>
-                                                <th scope="col">Title</th>
-                                                <th scope="col">Date Created</th>
-                                                <th scope="col">Edit</th>
+                                                <th scope="col">Full Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Phone Number</th>
+                                                <th scope="col">Date</th>
                                                 <th scope="col">Delete</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($categories as $category)
+                                            @foreach ($members as $member)
                                                 <tr>
-                                                    <th scope="row">{{$category->id}}</th>
-                                                    <td>{{$category->title}} </td>
-                                                    <td>{{date('m/d/Y', strtotime($category->updated_at))}}</td>
-                                                    <td>
-                                                        <a href="/admin/food-categories/{{$category->id}}/edit"><i class="far fa-edit"></i></a>
-                                                    </td>
+                                                    <th scope="row">{{$member->id}}</th>
+                                                    <td>{{$member->fname}} {{$member->lname}}</td>
+                                                    <td>{{$member->email}}</td>
+                                                    <td>{{$member->phone_number}}</td>
+                                                    <td>{{date('m/d/Y', strtotime($member->updated_at))}}</td>
+                                                    
                                                     <td>
                                                         
                                                         <a href="#" onclick="event.preventDefault();
-                                document.getElementById('delete-category-{{$category->id}}').submit();">
+                                document.getElementById('delete-member-{{$member->id}}').submit();">
                                     <i class="far fa-trash-alt"></i>
                                 </a>
-                                <form id="delete-category-{{$category->id}}" action="/admin/food-categories/{{$category->id}}/delete" method="POST" style="display: none;">
+                                <form id="delete-member-{{$member->id}}" action="/admin/members/{{$member->id}}/delete" method="POST" style="display: none;">
                                                 @method('DELETE')
                                                 @csrf
                                             </form>
@@ -69,7 +70,7 @@
                                             
                                         </tbody>
                                     </table>
-                                    {{ $categories->links() }}
+                                    {{ $members->links() }}
                                 </div>
                             </div>
                         </div>
