@@ -3,21 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Member;
-use App\Reservation;
-use App\FoodCategory;
-use App\FoodItem;
+
 
 
 class StaticPagesController extends Controller
 {
     public function home(){
-        
-        $categories = FoodCategory::all();
 
-        return view('home', [
-            "categories" => $categories
-        ]);
+        return view('home');
     }
     public function about(){
         return view('pages/about');
