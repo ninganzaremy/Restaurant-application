@@ -1,12 +1,8 @@
 @extends('layouts.landing')
 
 @section('title')
- America's #1 Burgers
+  America's #1 Burgers
 @endsection
-
-
-
-
 @section('content')
     <section id="information">
     <div class="restaurant-image">
@@ -38,5 +34,5 @@
       </a>
     </div>
   </section>
-
+@include('includes.food-categories-slider')
 @endsection
