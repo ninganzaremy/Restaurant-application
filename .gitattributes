@@ -1,4 +1,4 @@
 *.php linguist-detectable=true
-*.css linguist-vendored
-*.html linguist-detectable= false
+*.php linguist-language=PHP
+public/* linguist-vendored
 CHANGELOG.md export-ignore
