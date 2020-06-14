@@ -28,26 +28,26 @@ Route::get('/admin', 'admin\AdminController@dashboard');
 Route::get('/admin/users', 'admin\UsersController@index') ;
 Route::get('/admin/users/create', 'admin\UsersController@create');
 
-Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
-Route::put('/admin/users/{id}', 'admin\UsersController@update');
-Route::get('/admin/users/create', 'admin\UsersController@create');
-Route::post('/admin/users', 'admin\UsersController@store');
-Route::put('/admin/users/{id}', 'admin\UsersController@update');
-Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete');
+Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit')->middleware('role:Admin');
+Route::put('/admin/users/{id}', 'admin\UsersController@update')->middleware('role:Admin');
+Route::get('/admin/users/create', 'admin\UsersController@create')->middleware('role:Admin');
+Route::post('/admin/users', 'admin\UsersController@store')->middleware('role:Admin');
+Route::put('/admin/users/{id}', 'admin\UsersController@update')->middleware('role:Admin');
+Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete')->middleware('role:Admin');
 // Admin Food Items
-Route::get('/admin/food-items', 'admin\FoodItemsController@index');
-Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
-Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
-Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
-Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
+Route::get('/admin/food-items', 'admin\FoodItemsController@index')->middleware('role:Admin');
+Route::get('/admin/food-items/create', 'admin\FoodItemsController@create')->middleware('role:Admin');
+Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit')->middleware('role:Admin');
+Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update')->middleware('role:Admin');
+Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete')->middleware('role:Admin');
 
 
 //Admin FoodCategories
-Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
-Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
-Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
-Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update');
-Route::delete('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete');
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index')->middleware('role:Admin');
+Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create')->middleware('role:Admin');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit')->middleware('role:Admin');
+Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update')->middleware('role:Admin');
+Route::delete('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete')->middleware('role:Admin');
 
 
 // Admin Customers
@@ -60,12 +60,12 @@ Route::get('/admin/reservations', 'admin\ReservationController@index');
 Route::delete('/admin/reservations/{id}/delete', 'admin\ReservationsController@delete');
 
 // Admin Settings
-Route::get('/admin/settings/general', 'admin\SettingController@general');
-Route::put('/admin/settings/general', 'admin\SettingController@saveGeneral');
-Route::get('/admin/settings/seo', 'admin\SettingController@seo');
-Route::put('/admin/settings/seo', 'admin\SettingController@saveSeo');
-Route::get('/admin/settings/social', 'admin\SettingController@social');
-Route::put('/admin/settings/social', 'admin\SettingController@saveSocial');
+Route::get('/admin/settings/general', 'admin\SettingController@general')->middleware('role:Admin');
+Route::put('/admin/settings/general', 'admin\SettingController@saveGeneral')->middleware('role:Admin');
+Route::get('/admin/settings/seo', 'admin\SettingController@seo')->middleware('role:Admin');
+Route::put('/admin/settings/seo', 'admin\SettingController@saveSeo')->middleware('role:Admin');
+Route::get('/admin/settings/social', 'admin\SettingController@social')->middleware('role:Admin');
+Route::put('/admin/settings/social', 'admin\SettingController@saveSocial')->middleware('role:Admin');
 
 
 //Admin Autentication
