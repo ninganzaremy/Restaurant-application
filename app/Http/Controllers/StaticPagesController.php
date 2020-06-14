@@ -3,14 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Member;
+use App\Reservation;
+use App\FoodCategory;
+use App\FoodItem;
 
 
 
 class StaticPagesController extends Controller
 {
     public function home(){
+      $categories = FoodCategory::all();
 
-        return view('home');
+        return view('home', [
+            "categories" => $categories
+        ]);
     }
     public function about(){
         return view('pages/about');
@@ -36,7 +43,7 @@ class StaticPagesController extends Controller
         $reservation->time = request('time');
         $reservation->save();
 
-       
+
         return redirect('/reservations/thank-you');
     }
     public function contact(){
@@ -59,7 +66,7 @@ class StaticPagesController extends Controller
         $member->phone_number = request('phone_number');
         $member->save();
 
-       
+
         return redirect('/offers/thank-you');
     }
     public function thankYou(){
@@ -82,4 +89,3 @@ class StaticPagesController extends Controller
         ]);
     }
 }
-
