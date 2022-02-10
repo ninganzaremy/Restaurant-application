@@ -24,6 +24,6 @@
     "dependencies": {
         "boostrap": "^2.0.0",
         "fibers": "^5.0.0",
-        "node-sass": "^4.14.1"
+        "node-sass": "^7.0.0"
     }
 }
